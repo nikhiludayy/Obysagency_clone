@@ -10,34 +10,37 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <!-- <link rel="manifest" href="/site.webmanifest"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
-    <!-- <div id="hh">
-        <h5>NOW</h5>
-    </div> -->
+<body id="body">
+
     <div id="crsr">
         <div id="point"></div>
     </div>
     <div id="loader">
-        <div id="p1"><div class="line">
-            <div id="lineprt1">
-                <h5 id="loadd">0</h5>
-                <h5>- 100%</h5>
+        <div id="p1">
+            <div class="line">
+                <div id="lineprt1">
+                    <h5 id="loadd">0</h5>
+                    <h5>- 100%</h5>
+                </div>
+                <h1>Your</h1>
             </div>
-            <h1>Your</h1>
+            <div class="line">
+                <h1>Web Experiences</h1>
+            </div>
+            <div class="line">
+                <h1>is loading right <span>NOW </span></h1>
+            </div>
         </div>
-        <div class="line">
-            <h1>Web Experiences</h1>
+
+        <div id="p2">
+            <div id="plwait" class="line">
+                <h1>Please wait <br>few Seconds</h1>
+            </div>
         </div>
-        <div class="line">
-            <h1>is loading right  <span>NOW </span></h1>
-        </div></div>
-        
-        <div id="p2"><div id="plwait" class="line">
-            <h1>Please wait <br>few Seconds</h1>
-        </div></div>
     </div>
 
     <main id="main">
@@ -97,9 +100,8 @@
         <div id="page1">
             <div id="page1c">
                 <div id="p1c">
-                    <div class="p1c">
-                        <h1>01</h1>
-                    </div>
+                    <h1>01</h1>
+
                 </div>
                 <div id="p2c">
                     <div class="p2c">
@@ -117,10 +119,36 @@
                 </div>
             </div>
         </div>
-        <div id="page2"></div>
+        <div id="page2">
+            <div id="video1">
+                <div id="videocsr">
+                    <i id="play" class="ri-play-fill"></i>
+                    <i id="pause" class="ri-pause-fill"></i>
+                </div>
+                <div id="videobg">
+                </div>
+                <video id="videocnt" src="https://obys.agency/wp-content/uploads/2022/11/Obys-Showreel-2022.mp4"></video>
+            </div>
+
+        </div>
         <div id="page3"></div>
         <div id="page4"></div>
     </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
