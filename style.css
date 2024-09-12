@@ -709,13 +709,15 @@ nav #navprt1 {
     font-size: 7vw;
     text-transform: uppercase;
     font-weight: 500;
+    transition: all 1s;
 }
 #footer #footer-container #o1:hover{
     font-family: 'silkl';
     -webkit-text-stroke: 1px #fff;
     color: transparent;
-    transition: all .6s;
-    /* animation: shover 10s linear; */
+    transition: all 2s;
+
+    
 }
 
 
@@ -746,20 +748,7 @@ nav #navprt1 {
     color: currentColor;
 }
 
-@keyframes shover {
-    0%{
-        opacity: (100);
-    }
-    47%{
-        opacity: (0);
-    }
-    50%{
-        opacity: (0);
-    }
-    100%{
-        opacity: (100);
-    }
-}
+
 
 #footer #footer-container #grid-box{
     height: 37vh;
