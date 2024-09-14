@@ -11,33 +11,33 @@ function locoAnimation() {
     // for mobile
     smartphone: { smooth: true },
   });
-  locoScroll.on("scroll", ScrollTrigger.update);
+  //   locoScroll.on("scroll", ScrollTrigger.update);
 
-  ScrollTrigger.scrollerProxy("#main", {
-    scrollTop(value) {
-      return arguments.length
-        ? locoScroll.scrollTo(value, 0, 0)
-        : locoScroll.scroll.instance.scroll.y;
-    },
-    getBoundingClientRect() {
-      return {
-        top: 0,
-        left: 0,
-        width: window.innerWidth,
-        height: window.innerHeight,
-      };
-    },
+  //   ScrollTrigger.scrollerProxy("#main", {
+  //     scrollTop(value) {
+  //       return arguments.length
+  //         ? locoScroll.scrollTo(value, 0, 0)
+  //         : locoScroll.scroll.instance.scroll.y;
+  //     },
+  //     getBoundingClientRect() {
+  //       return {
+  //         top: 0,
+  //         left: 0,
+  //         width: window.innerWidth,
+  //         height: window.innerHeight,
+  //       };
+  //     },
 
-    // follwoing line is not required to work pinning on touch screen
+  //     // follwoing line is not required to work pinning on touch screen
 
-    /* pinType: document.querySelector("#main").style.transform
-    ? "transform"
-    : "fixed"*/
-  });
+  //     /* pinType: document.querySelector("#main").style.transform
+  //     ? "transform"
+  //     : "fixed"*/
+  //   });
 
-  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+  //   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
-  ScrollTrigger.refresh();
+  //   ScrollTrigger.refresh();
 }
 
 function loaderanimation() {
@@ -121,37 +121,43 @@ function followplay() {
   videocsr1.style.top = "-10%";
   videocsr1.style.left = "60%";
   videocsr.addEventListener("mouseenter", () => {
-    console.log("hello");
-    videocsr1.style.position = "fixed";
+    // console.log("hello");
+    // videocsr1.style.position = "absolute";
     gsap.to("#crsr", {
       opacity: 0,
       ease: Cubic,
       duration: 0.7,
     });
     videocsr.addEventListener("mousemove", (del) => {
-      // console.log(del.x);
-      // console.log(del.y);
+      //   console.log(del.x);
+      //   console.log(del.y);
       gsap.to("#videocsr", {
-        left: del.x,
-        top: del.y,
+        left: del.x - 550,
+        top: del.y-150,
         duration: 0.3,
       });
     });
   });
   videocsr.addEventListener("mouseleave", () => {
-    console.log("hello1");
     gsap.to("#crsr", {
       opacity: 100,
       ease: Cubic,
       duration: 1,
     });
+    
     gsap.to("#videocsr", {
-      left: 530,
-      top: -55,
+      left: "60%",
+      top: "-10%",
       ease: Cubic,
       duration: 0.5,
     });
-    videocsr1.style.position = "absolute";
+    // gsap.to("#videocsr", {
+    //   left: 530,
+    //   top: -55,
+    //   ease: Cubic,
+    //   duration: 0.5,
+    // });
+    // videocsr1.style.position = "absolute";
   });
 }
 followplay();
@@ -223,7 +229,7 @@ function sheryAnimation() {
     config: {
       a: { value: 2.06, range: [0, 30] },
       b: { value: 0.95, range: [-1, 1] },
-      zindex: { value: -9996999, range: [-9999999, 9999999] },
+      zIndex: { value: -9996999, range: [-9999999, 9999999] },
       aspect: { value: 0.8163449233043133 },
       ignoreShapeAspect: { value: true },
       shapePosition: { value: { x: 0, y: 0 } },
@@ -256,24 +262,24 @@ function sheryAnimation() {
 }
 
 sheryAnimation();
-// locoAnimation();
+locoAnimation();
 
 let flag = document.querySelector("#flag");
-document.addEventListener("mousemove",function(dets){
-    gsap.to("#flag",{
-        x: dets.x,
-        y: dets.y
-    })
-})
+document.addEventListener("mousemove", function (dets) {
+  gsap.to("#flag", {
+    x: dets.x,
+    y: dets.y,
+  });
+});
 
 let heroHover = document.querySelector("#hero-hover");
-heroHover.addEventListener("mouseenter",function(){
-    gsap.to("#flag",{
-        opacity: 1
-    })
-})
-heroHover.addEventListener("mouseleave",function(){
-    gsap.to("#flag",{
-        opacity: 0
-    })
-})
+heroHover.addEventListener("mouseenter", function () {
+  gsap.to("#flag", {
+    opacity: 1,
+  });
+});
+heroHover.addEventListener("mouseleave", function () {
+  gsap.to("#flag", {
+    opacity: 0,
+  });
+});

@@ -32,7 +32,7 @@ body {
 }
 
 body {
-  cursor: none;
+  /* cursor: none; */
   flex-shrink: 0;
   font-family: plainl;
   /* font-size: calc(14px + 2*(100vw - 320px)/1600); */
@@ -69,12 +69,12 @@ main {
 }
 
 #loader {
-  /* display: none; */
+  display: none;
   overflow: hidden;
   min-width: 100%;
   min-height: 100%;
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   background-color: #0b0b0b;
   padding: 25vh 10vw;
   opacity: 100;
@@ -287,8 +287,9 @@ nav #navprt1 {
 
 #page2 #video1 #videocsr {
   position: absolute;
-  top: 100%;
-  left: 60%;
+  /* top: 100%;
+  left: 60%; */
+  /* transform: translate(-200%,-250%); */
   width: 10em;
   height: 10em;
   display: flex;
@@ -774,14 +775,14 @@ nav #navprt1 {
 }
 
 ._canvas_container{
-    z-index: 9999 !important;
+    z-index: 999 !important;
     pointer-events: none;
 }
 
 #flag{
     width: 20vw;
     position: absolute;
-    top: 0;
+    top: -100px;
     left: 0;
     transform: translate(-50%, -50%);
     z-index: -99;
